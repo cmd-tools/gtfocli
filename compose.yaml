@@ -1,0 +1,6 @@
+services:
+  app:
+    container_name: gtfocli
+    build:
+      context: .
+      target: final
