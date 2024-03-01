@@ -87,7 +87,14 @@ func cleanList(needleList []string) []string {
 	var results []string
 	for _, needle := range needleList {
 		if needle != constants.Empty {
-			base := filepath.Base(filepath.FromSlash(needle))
+			base := constants.Empty
+			if operatingSystem == constants.Windows {
+				list := strings.Split(strings.ReplaceAll(needle, "\\\\", "\\"), "\\")
+				base = list[len(list)-1]
+			} else {
+				base = filepath.Base(filepath.FromSlash(needle))
+			}
+			base = strings.TrimSuffix(base, filepath.Ext(base))
 			results = append(results, base)
 		}
 	}
