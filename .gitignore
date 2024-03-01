@@ -144,3 +144,5 @@ Temporary Items
 gtfocli
 *.txt
 .gtfocli_repo
+
+dist/
