@@ -35,10 +35,7 @@ var searchCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		if err := validateRepositories(); nil != err {
-			fmt.Println(err.Error())
-			os.Exit(1)
-		}
+		initRepositories()
 
 		needleList := cleanList(needleList)
 
@@ -130,11 +127,10 @@ func validateFlags() error {
 	return nil
 }
 
-func validateRepositories() error {
+func initRepositories() {
 	if operatingSystem == constants.Unix && utils.CountGTFOBinsFiles() == 0 || operatingSystem == constants.Windows && utils.CountLOLBASFiles() == 0 {
-		return fmt.Errorf("did you run first '%s %s' ", constants.Main, constants.Update)
+		updateCmd.Run(rootCmd, []string{})
 	}
-	return nil
 }
 
 func searchInGTFOBin(needleList []string, category string) interface{} {

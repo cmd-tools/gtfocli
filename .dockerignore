@@ -28,6 +28,7 @@
 **/npm-debug.log
 **/*.txt
 **/obj
+**/docs
 **/secrets.dev.yaml
 **/values.dev.yaml
 LICENSE

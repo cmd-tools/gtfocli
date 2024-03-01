@@ -52,7 +52,7 @@ func downloadFiles() error {
 		logger.Logger.Info("Done.")
 	}
 
-	fmt.Printf("Database updated!")
+	fmt.Println("Database updated!")
 
 	return nil
 }

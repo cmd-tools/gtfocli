@@ -30,7 +30,6 @@ func Init(commandName string, debug bool) {
 	var err error
 
 	if f, err = os.OpenFile(logFile, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666); err != nil {
-		// Using fmt to print to stdout since logger is not ready
 		fmt.Println(err)
 	}
 
