@@ -12,6 +12,7 @@
   - [Search for Unix binaries](#search-for-unix-binaries)
   - [Search for Windows binaries](#search-for-windows-binaries)
   - [Search using dockerized solution](#search-using-dockerized-solution)
+  - [CTF](#CTF)
 - [Credits](#credits)
 - [Contributing](#contributing)
 
@@ -118,6 +119,20 @@ arp
 /bin/tail
 
 docker run -i -v $(pwd):/tmp cmdtoolsowner/gtfocli search -f /tmp/myBinaryList.txt
+```
+
+## CTF
+
+An example of common use case for `gtfocli` is together with `find`:
+
+```shell
+find / -type f \( -perm 04000 -o -perm -u=s \) -exec gtfocli search {} \; 2>/dev/null
+```
+
+or
+
+```shell
+find / -type f \( -perm 04000 -o -perm -u=s \) 2>/dev/null 1>/tmp/binaries.txt && gtfocli search -f /tmp/binaries.txt
 ```
 
 ## Credits
