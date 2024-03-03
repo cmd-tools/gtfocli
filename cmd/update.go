@@ -11,7 +11,7 @@ import (
 var updateCmd = &cobra.Command{
 	Use:   constants.Update,
 	Short: "Update gtfocli database.",
-	Long:  "Download sources use but gtfocli to run offline search.",
+	Long:  "Download sources used by gtfocli to run offline search.",
 	Run: func(cmd *cobra.Command, args []string) {
 		logger.Init(constants.Update, IsDebug())
 		err := downloadFiles()

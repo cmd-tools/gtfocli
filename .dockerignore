@@ -7,6 +7,8 @@
 **/.DS_Store
 **/.classpath
 **/.dockerignore
+**/.goreleaser.yaml
+**/compose.yaml
 **/.env
 **/.git
 **/.gitignore

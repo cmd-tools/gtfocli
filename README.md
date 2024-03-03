@@ -72,9 +72,8 @@ gtfocli search -f windowsExecutableList.txt --os windows
 
 Search for binary `Winget` and print output in `yaml` format (see `-h` for available formats)
 ```shell
-gtfocli search tar -o yaml --os windows
+gtfocli search Winget -o yaml --os windows
 ```
 
 ## Contributing
 You want to contribute to this project? Wow, thanks! So please just fork it and send me a pull request.
-
