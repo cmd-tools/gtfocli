@@ -2,7 +2,7 @@
 
 `GTFOcli` it's a Command Line Interface for easy binaries search commands that can be used to bypass local security restrictions in misconfigured systems.
 
-![](https://github.com/cmd-tools/gtfocli/tree/main/docs/gtfocli.gif)
+![](https://github.com/cmd-tools/gtfocli/blob/main/docs/gtfocli.gif)
 ---
 ## Table of Contents
 
