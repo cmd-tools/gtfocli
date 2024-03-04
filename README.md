@@ -139,7 +139,7 @@ find / -type f \( -perm 04000 -o -perm -u=s \) -exec gtfocli search {} \; 2>/dev
 or
 
 ```shell
-find / -type f \( -perm 04000 -o -perm -u=s \) 2>/dev/null 1>/tmp/binaries.txt && gtfocli search -f /tmp/binaries.txt
+find / -type f \( -perm 04000 -o -perm -u=s \) 2>/dev/null | gtfocli search -f /tmp/binaries.txt
 ```
 
 ## Credits
