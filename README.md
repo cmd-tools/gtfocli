@@ -24,6 +24,13 @@ Using `go`:
 go install github.com/cmd-tools/gtfocli@latest
 ```
 
+Using `homebrew`:
+
+```shell
+brew tap cmd-tools/homebrew-tap
+brew install gtfocli
+```
+
 Using `docker`:
 
 ```shell

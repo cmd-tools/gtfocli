@@ -28,6 +28,20 @@ archives:
       - goos: windows
         format: zip
 
+brews:
+  - repository:
+      owner: cmd-tools
+      name: homebrew-tap
+
+    commit_author:
+      name: cmd-tools
+      email: cmdtoolsowner@gmail.com
+
+    folder: Formula
+    homepage: "https://github.com/cmd-tools/gtfocli"
+    description: " GTFO Command Line Interface for easy binaries search commands that can be used to bypass local security restrictions in misconfigured systems."
+    license: "Apache License 2.0"
+
 changelog:
   sort: asc
   filters:
