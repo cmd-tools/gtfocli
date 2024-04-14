@@ -21,6 +21,8 @@ var GTFOBinCategories = []string{
 	"file-upload",
 	"file-download",
 	"limited-suid",
+	"library-load",
+	"capabilities",
 }
 
 type Category struct {
@@ -37,6 +39,8 @@ type Function struct {
 	FileUpload   []Category `yaml:"file-upload"   json:"file-upload"    xml:"file-upload"`
 	FileDownload []Category `yaml:"file-download" json:"file-download"  xml:"file-download"`
 	LimitedSuid  []Category `yaml:"limited-suid"  json:"limited-suid"   xml:"limited-suid"`
+	LibraryLoad  []Category `yaml:"library-load"  json:"library-load"   xml:"library-load"`
+	Capabilities []Category `yaml:"capabilities"  json:"capabilities"   xml:"capabilities"`
 }
 
 type GTFOBinContent struct {
@@ -129,6 +133,10 @@ func GetGTFOBinCategory(category string, list []*Function) []Category {
 			selectedCategories = append(selectedCategories, w.FileDownload...)
 		case "limited-suid":
 			selectedCategories = append(selectedCategories, w.LimitedSuid...)
+		case "library-load":
+			selectedCategories = append(selectedCategories, w.LibraryLoad...)
+		case "capabilities":
+			selectedCategories = append(selectedCategories, w.Capabilities...)
 		}
 	}
 	return selectedCategories
@@ -153,6 +161,8 @@ func SummaryGTFOBinTable(data []*Function) bytes.Buffer {
 			fmt.Sprintf("%d", len(item.FileUpload)),
 			fmt.Sprintf("%d", len(item.FileDownload)),
 			fmt.Sprintf("%d", len(item.LimitedSuid)),
+			fmt.Sprintf("%d", len(item.LibraryLoad)),
+			fmt.Sprintf("%d", len(item.Capabilities)),
 		}
 		table.Append(row)
 	}
