@@ -3,7 +3,7 @@ module github.com/cmd-tools/gtfocli
 go 1.21.3
 
 require (
-	github.com/hashicorp/go-getter v1.7.3
+	github.com/hashicorp/go-getter v1.7.5
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
