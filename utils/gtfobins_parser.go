@@ -150,7 +150,7 @@ func SummaryGTFOBinTable(data []*Function) bytes.Buffer {
 	}
 
 	table := tablewriter.NewWriter(&buffer)
-	table.SetHeader(append([]string{"Name"}, GTFOBinCategories...))
+	table.Header(append([]string{"Name"}, GTFOBinCategories...))
 	for _, item := range data {
 		row := []string{
 			item.Name,
