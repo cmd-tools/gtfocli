@@ -159,7 +159,7 @@ func SummaryLOLBASTable(data []*LOLBASContent) bytes.Buffer {
 	}
 
 	table := tablewriter.NewWriter(&buffer)
-	table.SetHeader(append([]string{"Name"}, LOLBASCategories...))
+	table.Header(append([]string{"Name"}, LOLBASCategories...))
 	for _, item := range data {
 		var list []string
 		for _, category := range LOLBASCategories {
